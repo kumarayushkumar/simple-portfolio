@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@media (min-width: 800px) {
+    :root {
+        --font-s-h1: 4.25rem;
+        --font-s-h2: 3.5rem;
+        --font-s-h3: 1.75rem;
+        --font-s-body: 1.125rem;
+    }
+}
+
+/* INTRO */
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .main_img {
+        grid-area: img;
+        min-width: 225px;
+        max-width: 313px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .sub__sec--intro {
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        margin-left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+
+    .title__sec--intro {
+        grid-area: title;
+    }
+} 
+
+/* services */
+@media (min-width:800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin: auto auto;
+    }
+
+    .what-i-do + .what-i-do {
+        margin-left: 2em;
+    }
+}
+
+/* who i am*/
+@media (min-width: 600px) {
+    .who-i-am {
+        display: grid;
+        grid-template-columns: 1fr 255px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "paragraph img";
+        grid-column-gap: 2em;
+    }
+
+    .title__sec--who--am{
+        grid-area: title;
+    }
+
+    .sub__sec--who-i-am {
+       grid-area: subtitle;
+       grid-row: 2;
+       grid-column: 1/-1;
+       position: relative;
+       left: -1em;
+       padding-left: 1em;
+       padding-right: calc(250px + 2em);
+       z-index: -1;
+       width: calc(100% + 2em);
+    }
+
+    .main_img2 {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+    }
+
+    .who-i-am__body {
+       grid-area: paragraph;
+    }
+}
+
+
+
+@media (min-width: 600px) {
+    .my-work-div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+    }
+} 
